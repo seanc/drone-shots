@@ -1,0 +1,21 @@
+{% extends 'templates/layouts/default.html' %}
+
+{% block content %}
+  {% include 'templates/layouts/sidebar.html' %}
+  <div class="videos gallery">
+    <div class="container">
+      {% for batch in videos|batch(3) %}
+        <div class="row">
+          {% for video in batch %}
+            <div class="column">
+              <div class="video-container gallery-image-container">
+                <i class="video-play fa fa-play"></i>
+                <div class="video-player" data-video-id="{{ video.name }}"></div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

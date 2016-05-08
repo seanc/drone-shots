@@ -1,0 +1,39 @@
+{% extends "templates/layouts/default.html" %}
+
+{% block css %}
+	<style>
+		.overlay {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+		.app {
+			display: flex;
+			align-items: center;
+		}
+	</style>
+{% endblock %}
+
+{% block content %}
+<div class="jumbo full-center">
+  <div class="jumbo-wrapper">
+    <div class="brand">
+      <p class="brand-text">Drone Shots</p>
+      <!--<img src="" alt="" class="brand-image">-->
+    </div>
+    <ul class="navbar">
+			{% for link in navLinks %}
+				<li class="navbar-item">
+					<a href="{{ link.href }}" class="navbar-link {{ 'active' if link.key == section else '' }}">{{ link.label }}</a>
+				</li>
+			{% endfor %}
+			{% if user %}
+				{% if user.canAccessKeystone %}
+					<li class="navbar-item"><a href="/keystone" class="navbar-link">Admin</a></li>
+				{% endif %}
+			{% endif %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

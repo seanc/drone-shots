@@ -1,0 +1,35 @@
+.jumbo {
+  height: 25em;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: skewY(10deg);
+
+  .brand {
+    .brand-text {
+      color: #fff;
+      font-weight: 700;
+      font-size: 2.5em;
+      text-transform: uppercase;
+    }
+  }
+
+  .navbar-link {
+    transition: color 200ms;
+    
+    &.active {
+      color: #c0392b !important;
+    }
+
+    &:hover {
+      color: #c0392b !important;
+    }
+  }
+
+  .jumbo-wrapper {
+    transform: skewY(-10deg);
+  }
+}

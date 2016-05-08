@@ -1,0 +1,43 @@
+{% extends 'templates/layouts/default.html' %}
+
+{% block css %}
+	<style>
+		.overlay {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+		.app {
+			display: flex;
+			align-items: center;
+		}
+    .jumbo {
+      min-height: 25em;
+    }
+    .description .container {
+      color: #ddd;
+      padding: 0 150px;
+    }
+	</style>
+{% endblock %}
+
+{% block content %}
+  {% include 'templates/layouts/sidebar.html' %}
+  <div class="jumbo full-center">
+    <div class="jumbo-wrapper">
+      {% for desc in about %}
+        {% if desc.enabled %}
+          <div class="brand">
+            <p class="brand-text">{{ desc.name }}</p>
+          </div>
+          <div class="description">
+            <div class="container">
+              {{ desc.content.html }}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

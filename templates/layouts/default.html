@@ -1,0 +1,50 @@
+{% import "templates/mixins/flash-messages.html" as FM %}
+
+<!-- Designed and Developed by Sean Wilson <hello@imsean.me> <https://imsean.me> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HD Stunning Drone Pictures and Videos">
+  <meta name="author" content="Sentinel">
+  <meta name="keywords" content="drone,video,hd,stunning,pictures">
+
+  <title>Drone Shots</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:400,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/site.css">
+	
+	{# This file provides the default styling for the KeystoneJS Content Editor #}
+	{% if user and user.canAccessKeystone %}
+		<link href="/keystone/styles/content/editor.min.css" rel="stylesheet">
+	{% endif %}
+
+	{# HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+			Safely remove this block if you are not targeting IE8 #}
+	<!--[if lt IE 9]>
+		<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+		<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	{# Include template-specific stylesheets by extending the css block #}
+	{% block css %}{% endblock %}
+
+	{# Add any other template-specific HEAD tags by extending the head block #}
+	{% block head %}{% endblock %}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdn.lukej.me/jquery.tubular/1.0.1/jquery.tubular.1.0.js"></script>
+  <script src="/js/index.js"></script>
+</head>
+<body>
+    <div class="app">
+      <div class="overlay">
+        {% block content %} {% endblock %}
+      </div>
+    </div>
+</body>
+</html>

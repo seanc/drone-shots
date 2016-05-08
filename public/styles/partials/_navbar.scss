@@ -1,0 +1,16 @@
+.navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  
+  > .navbar-item {
+    float: left;
+    margin: 0 8px;
+    
+    > .navbar-link {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}

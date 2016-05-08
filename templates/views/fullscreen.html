@@ -1,0 +1,31 @@
+{% extends 'templates/layouts/default.html' %}
+
+{% block head %}
+  <script>
+    var videos = [
+      {% for video in videos %}
+        '{{ video.name }}',
+      {% endfor %}
+    ];
+  </script>
+{% endblock %}
+
+{% block css %}
+  <style>
+    #tubular-container {
+      -webkit-filter: none;
+      filter: none;
+    }
+    
+    .overlay {
+      background: none;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  {% include 'templates/layouts/sidebar.html' %}
+  <div class="fullscreen-overlay">
+    <div class="fullscreen"></div>
+  </div>
+{% endblock %}

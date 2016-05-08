@@ -1,0 +1,15 @@
+.app {
+  position: relative;
+  z-index: 1;
+}
+
+.overlay {
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(#000, 0.8);
+  z-index: 666;
+}
