@@ -5,11 +5,7 @@ body, html {
   background-color: #000; }
 
 .full-center {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   height: 100%; }
@@ -29,24 +25,16 @@ body, html {
   z-index: 666; }
 
 #tubular-container {
-  -webkit-filter: blur(10px);
   filter: blur(10px); }
 
 .jumbo {
   height: 25em;
   width: 100%;
   background-color: #000;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-  -webkit-transform: skewY(10deg);
   transform: skewY(10deg); }
   .jumbo .brand .brand-text {
     color: #fff;
@@ -60,7 +48,6 @@ body, html {
     .jumbo .navbar-link:hover {
       color: #c0392b !important; }
   .jumbo .jumbo-wrapper {
-    -webkit-transform: skewY(-10deg);
     transform: skewY(-10deg); }
 
 .navbar {
@@ -140,7 +127,6 @@ body, html {
     .gallery .gallery-image-container:hover .gallery-overlay {
       opacity: 1; }
     .gallery .gallery-image-container:hover .gallery-image {
-      -webkit-filter: grayscale(0%);
       filter: grayscale(0%); }
     .gallery .gallery-image-container .gallery-overlay {
       position: absolute;
@@ -150,14 +136,8 @@ body, html {
       height: 100%;
       z-index: 666;
       background: rgba(0, 0, 0, 0.5);
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
       align-items: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
       text-align: center;
       opacity: 0;
@@ -170,11 +150,8 @@ body, html {
       display: block;
       height: 100%;
       width: 100%;
-      -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
-      transition: -webkit-filter 200ms;
-      transition: filter 200ms;
-      transition: filter 200ms, -webkit-filter 200ms; }
+      transition: filter 200ms; }
 
 .videos .video-container {
   position: relative;
