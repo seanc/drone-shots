@@ -58,7 +58,8 @@
     if (typeof videos !== 'undefined') {
       $('#tubular-shield, #tubular-container').remove();
       $('.fullscreen').tubular({
-        videoId: videos[1]
+        videoId: videos[1],
+        mute: false
       });
       
       $('.fullscreen-overlay').on('click', rotateVideo);
